@@ -1,5 +1,15 @@
 **GadgetsOnline-WebForms** is An ASP.NET 4.7.2 Web Forms based sample application. It uses EntityFramework and SQL Server for data persistence. 
 
+Application Setup
+--
+Run following commands from Package Manager console to setup the initial DB. 
+
+```
+add-migration v1
+update-database
+```
+
+
 
  Application Pages
  ---
