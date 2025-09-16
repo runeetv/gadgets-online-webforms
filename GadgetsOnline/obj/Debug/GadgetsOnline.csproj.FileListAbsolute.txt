@@ -1,0 +1,11 @@
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\roslyn\System.Memory.dll
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\roslyn\VBCSCompiler.exe
+C:\Temp\gadgetsonline\GadgetsOnline\GadgetsOnline\bin\System.Web.WebPages.Deployment.dll
