@@ -123,5 +123,8 @@
                 <asp:Label ID="LblStatusMessage" runat="server" />
             </asp:Panel>
         </ContentTemplate>
+        <Triggers>
+            <asp:PostBackTrigger ControlID="BtnAddProduct" />
+        </Triggers>
     </asp:UpdatePanel>
 </div>

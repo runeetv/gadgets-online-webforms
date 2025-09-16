@@ -17,6 +17,7 @@
             <ul id="navlist">
                 <li><a href="~/Default.aspx" runat="server" id="current">Home</a></li>
                 <li><a href="~/CartPages/ShoppingCart.aspx" runat="server">ShoppingCart</a></li>
+                <li><a href="~/Admin/ManageProducts.aspx" runat="server" style="color: #ff6600;">Admin</a></li>
             </ul>
         </div>
 

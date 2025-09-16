@@ -41,7 +41,7 @@
                     <ItemTemplate>
                         <li>
                             <a href='<%# ResolveUrl("~/Store/Details.aspx?id=" + Eval("ProductId")) %>'>
-                                <img alt='<%# Eval("Name") %>' src='<%# ResolveUrl(Eval("ProductArtUrl").ToString()) %>' />
+                                <img alt='<%# Eval("Name") %>' src='<%# ResolveUrl((Eval("ProductArtUrl") ?? "~/Images/placeholder.jpg").ToString()) %>' />
                                 <span><%# Eval("Name") %></span>
                             </a>
                         </li>
@@ -51,7 +51,7 @@
         </div>
 
         <div id="footer">
-            <a href="https://aws.amazon.com/developer/language/net/"> AWS ?? ASP.NET </a>
+            <a href="https://aws.amazon.com/developer/language/net/"> AWS • ASP.NET </a>
         </div>
     </form>
 </body>

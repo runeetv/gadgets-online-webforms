@@ -6,12 +6,13 @@ namespace GadgetsOnline.Models
     {
         public GadgetsOnlineEntities() : base("Name=GadgetsOnlineEntities")
         {
-            Database.SetInitializer(new GadgetsOnlineDBInitializer());
+            // Removed Database.SetInitializer since we're using migrations
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<AdminUser> AdminUsers { get; set; }
     }
 }

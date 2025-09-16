@@ -7,8 +7,16 @@ namespace GadgetsOnline.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Page initialization logic if needed
-            Page.Title = "Manage Products - Admin";
+            if (!IsPostBack)
+            {
+                // Display welcome message with current user
+                if (User.Identity.IsAuthenticated)
+                {
+                    LblWelcome.Text = $"Welcome, {User.Identity.Name}";
+                }
+                
+                Page.Title = "Manage Products - Admin";
+            }
         }
     }
 }

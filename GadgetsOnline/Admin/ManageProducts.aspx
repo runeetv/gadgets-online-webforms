@@ -19,6 +19,29 @@
             padding: 15px;
             margin-bottom: 20px;
             border-radius: 5px;
+            position: relative;
+        }
+        .admin-nav {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        .admin-nav a {
+            margin-left: 10px;
+            color: #007bff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #007bff;
+            border-radius: 3px;
+        }
+        .admin-nav a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .welcome-message {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
         }
         .product-grid {
             width: 100%;
@@ -70,16 +93,18 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" enctype="multipart/form-data">
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true" />
         
         <div class="admin-container">
             <div class="admin-header">
+                <div class="admin-nav">
+                    <asp:Label ID="LblWelcome" runat="server" CssClass="welcome-message" />
+                    <a href="~/Default.aspx" runat="server">← Store</a>
+                    <a href="Logout.aspx">Logout</a>
+                </div>
                 <h1>Product Management</h1>
                 <p>Manage products for Gadgets Online store</p>
-                <nav>
-                    <a href="~/Default.aspx" runat="server"> ← Back to Store</a>
-                </nav>
             </div>
 
             <uc:ProductManagement ID="ProductManagementControl" runat="server" />

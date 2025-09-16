@@ -9,7 +9,7 @@ namespace GadgetsOnline.Services
     public class ShoppingCart
     {
         GadgetsOnlineEntities store = new GadgetsOnlineEntities();
-        string ShoppingCartId { get; set; }
+        public string ShoppingCartId { get; set; }
 
         public const string CartSessionKey = "CartId";
 

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
+using System.Security.Cryptography;
+using System.Text;
 
 
 namespace GadgetsOnline.Models
@@ -31,14 +33,49 @@ namespace GadgetsOnline.Models
                 new Product{CategoryId=3,Name="COMP 22-df003w",Price=389.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
                 new Product{CategoryId=4,Name="Bluetooth Headphones Over Ear",Price=28.00M,ProductArtUrl="/Content/Images/Headphones/1.png"},
                 new Product{CategoryId=4,Name="ZX Series ",Price=10.00M,ProductArtUrl="/Content/Images/Headphones/2.png"},
-                new Product{CategoryId=5,Name="Wireless charger",Price=9.99M,ProductArtUrl="/Content/Images/placeholder.gif"},
-                new Product{CategoryId=5,Name="Mousepad",Price=2.99M,ProductArtUrl="/Content/Images/placeholder.gif"},
-                new Product{CategoryId=5,Name="Keyboard",Price=9.99M,ProductArtUrl="/Content/Images/placeholder.gif"},
+
+                new Product{CategoryId=5,Name="Charging Cable",Price=23.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
+                new Product{CategoryId=5,Name="Mouse Pad",Price=13.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
+                new Product{CategoryId=5,Name="Keyboard Cable",Price=9.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
+                new Product{CategoryId=5,Name="Gaming Keyboard",Price=89.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
+                new Product{CategoryId=5,Name="PC Case",Price=99.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
+                new Product{CategoryId=5,Name="Gaming Head Set",Price=199.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
+                new Product{CategoryId=5,Name="Screen 27'",Price=319.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
+                new Product{CategoryId=3,Name="PC-E series",Price=599.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
+                new Product{CategoryId=1,Name="5G Mobile Phone",Price=1299.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
+                new Product{CategoryId=1,Name="Basic Phone ",Price=99.00M,ProductArtUrl="/Content/Images/placeholder.gif"},
 
             };
+
             context.Products.AddRange(products);
 
-            base.Seed(context);
+            // Create default admin user
+            var defaultAdminUser = new AdminUser
+            {
+                Username = "admin",
+                PasswordHash = HashPassword("admin"),
+                Email = "admin@gadgetsonline.com",
+                IsActive = true,
+                CreatedDate = System.DateTime.Now
+            };
+
+            context.AdminUsers.Add(defaultAdminUser);
+
+            context.SaveChanges();
+        }
+
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+                return builder.ToString();
+            }
         }
     }
 }
