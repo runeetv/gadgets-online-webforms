@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="GadgetsOnline.Admin.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="GadgetsOnline.Admin.Login" %>
 
 <!DOCTYPE html>
 
@@ -105,7 +105,7 @@
             <asp:Label ID="LblMessage" runat="server" CssClass="error-message" Visible="False" />
             
             <div class="back-link">
-                <a href="~/Default.aspx" runat="server">? Back to Store</a>
+                <a href="~/Default.aspx" runat="server"> ← Back to Store</a>
             </div>
         </div>
     </form>
